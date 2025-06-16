@@ -1,19 +1,21 @@
 body {
-    background-image: url("gym.jpg");
+    background-image: url("/CounterApp/gym.jpg");
     background-size: cover;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     text-align: center;
     height: 99vh;
     color: rgb(180, 45, 166);
 }
-.container{
+
+.container {
     background-color: white;
     opacity: 0.9;
     max-width: 85%;
     margin: auto;
     border: 3px solid rgb(180, 45, 166);
 }
+
 h1 {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -43,4 +45,3 @@ button {
 #save-btn {
     background: rgb(232, 160, 5);
 }
-
