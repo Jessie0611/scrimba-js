@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="basketball.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="scoreBoard">
+            <h3>HOME</h3>
+            <h2 id="homeScore">0</h2>
+            <div class="btn">
+                <button class="button" onclick="home1Plus()"> +1 </button>
+                <button class="button" onclick="home2Plus()"> +2 </button>
+                <button class="button" onclick="home3Plus()"> +3 </button>
+            </div>
+        </div>
+        <button class="buttonReset" onclick="home3Plus()"> Reset </button>
+        <div class="scoreBoard">
+            <h3>GUEST</h3>
+            <h2 id="awayScore">0</h2>
+            <div class="btn">
+                <button class="button" onclick="away1Plus()"> +1 </button>
+                <button class="button" onclick="away2Plus()"> +2 </button>
+                <button class="button" onclick="away3Plus()"> +3 </button>
+            </div>
+        </div>
+    </div>
+    <script src="basketball.js"></script>
+</body>
+
+</html>
