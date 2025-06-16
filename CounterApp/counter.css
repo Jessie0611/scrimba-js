@@ -1,5 +1,5 @@
 body {
-    background-image: url("/CounterApp/gym.jpg");
+    background-image: url("gym.jpg");
     background-size: cover;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
