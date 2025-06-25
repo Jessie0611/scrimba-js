@@ -9,12 +9,11 @@ inputBtn.addEventListener("click", function () {
     console.log(myLeads)
 })
 
-// 1. Wrap the code below in a renderLeads() function
 function renderLeads() {
     let listItems = ""
     for (let i = 0; i < myLeads.length; i++) {
-        listItems +=
-            `
+        //template string
+        listItems += `
             <li>
                 <a target='_blank' href='${myLeads[i]}'>
                     ${myLeads[i]}
