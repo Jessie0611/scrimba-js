@@ -28,14 +28,19 @@ const ulEl = document.getElementById("ul-el")
 // Store it in a variable, leadsFromLocalStorage
 let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
 
+//Check if leadsFromLocalStorage is truthy  If so, set myLeads to its value and call renderLeads()
+if (leadsFromLocalStorage) {
+    myLeads = leadsFromLocalStorage
+    renderLeads()
+}
+
 // Log out the variable
 console.log(leadsFromLocalStorage)
 
 inputBtn.addEventListener("click", function () {
     myLeads.push(inputEl.value)
     inputEl.value = ""
-    // Save the myLeads array to localStorage 
-    // PS: remember JSON.stringify()
+    // Save the myLeads array to localStorage   PS: remember JSON.stringify()
     localStorage.setItem("myLeads", JSON.stringify(myLeads))
     renderLeads()
 
@@ -43,7 +48,7 @@ inputBtn.addEventListener("click", function () {
     console.log(localStorage.getItem("myLeads"))
 })
 
-function renderLeads() {
+function renderLeads() { //shows user what was found in local storage 
     let listItems = ""
     for (let i = 0; i < myLeads.length; i++) {
         listItems += `
