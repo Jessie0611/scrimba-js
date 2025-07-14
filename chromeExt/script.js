@@ -17,23 +17,29 @@
 // 4. Console.log the string using typeof to verify that it's a string: console.log(typeof myLeads)
 
 
-
 //SAVE LEADS TO LOCAL STORAGE
 let myLeads = []
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
+const deleteBtn = document.getElementById("delete-btn")
 
 //GET LEADS FROM LOCAL STORAGE :  JSON.parse()
 // Store it in a variable, leadsFromLocalStorage
-let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
 
+const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads")) //use const, it doesn't get changed
 //Check if leadsFromLocalStorage is truthy  If so, set myLeads to its value and call renderLeads()
 if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage
     renderLeads()
 }
 
+deleteBtn.addEventListener('dblclick', function ()){
+    localStorage.clear() //clear local storage
+    myLeads = [] // set to empty array
+    renderLeads() //clears DOM bc it renders out the newly empty array
+
+}
 // Log out the variable
 console.log(leadsFromLocalStorage)
 
