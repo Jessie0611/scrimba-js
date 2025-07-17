@@ -14,3 +14,18 @@ function add(a, b) {
 }
 console.log(add(3, 4)) // should log 7
 console.log(add(9, 102)) // should log 111
+
+//.                parameters - inside the function
+function greetUser(greeting, name) {
+    welcomeEl.textContent = `${greeting}, ${name} 👋`
+}
+
+//.        arguments - outside the function
+greetUser("Howdy", "James")
+
+
+function add(num1, num2) {
+    return num1 + num2
+}
+
+add(3, 4)
