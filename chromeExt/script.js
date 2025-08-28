@@ -11,23 +11,12 @@ if (leadsFromLocalStorage) {
     render(myLeads)
 }
 
-const tabs = [
-    { url: "https://www.linkedin.com/in/jessica-battles/" }
-]
-
-
 tabBtn.addEventListener("click", function () {
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-        // since only one tab should be active and in the current window at once
-        // the return variable should only have one entry
-        let activeTab = tabs[0]
-        let activeTabId = activeTab.id // or do whatever you need
-
+        myLeads.push(tabs[0].url)
+        localStorage.setItem("myLeads", JSON.stringify(myLeads))
+        render(myLeads)
     })
-    myLeads.push(tabs[0].url)
-    localStorage.setItem("myLeads", JSON.stringify(myLeads))
-    render(myLeads)
-
 })
 
 function render(leads) {
